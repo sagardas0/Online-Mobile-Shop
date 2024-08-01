@@ -31,7 +31,7 @@ function HomeHeroSection() {
       <div className=' flex items-center justify-center'>
         <div className=' capitalize flex flex-col justify-center  text-center   '>
           <h1 className='text-3xl  md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Find Latest Models</h1>
-          <h2 className=' text-secondary-color p-3 '>100+ Brands | 100000+ Models | Winwares Den</h2>
+          <h2 className=' text-secondary-color p-3 '>100+ Brands | 100000+ Models | Online Mobile SHOP</h2>
         </div>
       </div> 
       <section className='grid grid-cols-1 md:grid-cols-4 w-full min-h-[50vh] p-5 pb-10 gap-5 '>
