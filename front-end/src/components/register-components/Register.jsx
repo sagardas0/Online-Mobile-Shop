@@ -103,7 +103,7 @@ const Register = () => {
       //set item to localstorage 
       setUserData(userData)
       userContext.setUser(userData)
-      router.push('/login'); // Redirect to dashboard on successful login
+    router.push('/login'); // Redirect to dashboard on successful login
     } else {
       setErrorMessage(regData.message);
     }
