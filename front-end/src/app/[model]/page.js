@@ -100,9 +100,9 @@ const page = ({ params }) => {
                     <span className=' font-semibold'>Brand:</span>
                     <span>{product.brand}</span>
                   </p>
-                  <p className='flex gap-1'>
+                  <p className='flex gap-1 items-center'>
                     <span className=' font-semibold'>Price:</span>
-                    <span className=' font-bold text-sky-800  '>{product.price}</span>
+                    <span className=' font-bold flex items-center justify-center'> <span className='text-2xl '>৳</span>{product.price}</span>
                   </p>
                   <p className='flex gap-1'>
                     <span className=' font-semibold'>Camera:</span>
@@ -140,16 +140,26 @@ const page = ({ params }) => {
                   <div className='py-2'>
                     {
                       userContext.user.login ?
-                       !alreadyAdded ?
+                       !alreadyAdded && product.inStock ?
+                       <>
                         <button onClick={handleAddToCart} className='bg-sky-500 rounded-lg py-2 px-3 font-bold text-white hover:bg-sky-600 '>
                           Add to Cart
-                          </button>
+                        </button>
+                        <p className='py-2 text-xs '>Product Available: InStock</p>
+                       </>
                         :
                         <button disabled className='bg-sky-500 rounded-lg py-2 px-3 font-bold text-white hover:bg-sky-600 '>
                         Already Added
                         </button>
                       :
-                      <Link className='bg-sky-500 rounded-lg py-2 px-3 font-bold text-white hover:bg-sky-600 ' href={'/login'}>Add to Cart</Link>
+                      <>
+                        <Link 
+                        className='bg-sky-500 rounded-lg py-2 px-3 font-bold text-white hover:bg-sky-600 ' 
+                        href={'/login'}>
+                          Add to Cart
+                        </Link>
+                        <p className='py-2 text-xs '>Product Available: InStock</p>
+                      </>
                     }
                   </div>
                 </div>

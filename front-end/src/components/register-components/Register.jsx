@@ -99,11 +99,11 @@ const Register = () => {
    
     if (regData.status == 200) {
       setErrorMessage('');
-      let userData = {...regData.data , login:true}
+      let userData = { login:false}
       //set item to localstorage 
       setUserData(userData)
       userContext.setUser(userData)
-      router.push('/dashboard'); // Redirect to dashboard on successful login
+      router.push('/login'); // Redirect to dashboard on successful login
     } else {
       setErrorMessage(regData.message);
     }

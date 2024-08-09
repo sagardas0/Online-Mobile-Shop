@@ -29,7 +29,7 @@ const UserOrderCard = ({p}) => {
                 </p> 
                 <p className='flex gap-2 items-center'>
                     <span className=' font-semibold'>Price:</span>
-                    <span className='font-bold text-lg text-slate-900'>{product.price}</span>
+                    <span className='font-bold text-lg text-slate-900 flex items-center'> <span className='text-2xl'>৳</span>{product.price}</span>
                 </p>
                 <p className='flex gap-2 items-center'>
                     <span className=' font-semibold'>Quantity:</span>

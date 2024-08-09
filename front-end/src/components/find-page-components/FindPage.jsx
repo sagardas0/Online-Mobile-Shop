@@ -40,7 +40,7 @@ const FindPage = () => {
         <div className='flex items-center justify-center'>
             <input value={search} onChange={handleChange} type="text" name="search" id="search" className='p-2 rounded-lg w-[400px] shadow-md' placeholder=' Search Mobile'  />
         </div>
-        <div className='p-3 pt-5 flex flex-col md:flex-row  gap-3 flex-wrap'>
+        <div className='p-3 pt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-3 flex-wrap'>
             {
                 all_products && search.length < 1 && notfound.length <1 &&
                 all_products.map(i=>(

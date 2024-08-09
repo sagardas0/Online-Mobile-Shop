@@ -27,11 +27,11 @@ const ConfirmedOrder = () => {
           <div className="grid grid-cols-1 gap-3 p-2 ">
             {
               myOrder && 
-              myOrder.map((order,index)=>
+              myOrder.slice().reverse().map((order,index)=>
                 <div key={index} className="flex flex-col py-3 border-b ">
                     <div>
                         <p> Order No: {index + 1} </p>
-                        <p>Total: ${order.total_amount} </p>
+                        <p className="flex items-center ">Total: <span className='text-2xl'>৳</span> {order.total_amount} </p>
                         <p className={` py-2 px-5 text-sm ${order.orderCompleted? " bg-green-500 ": " bg-red-500 "} inline-block rounded-full font-semibold text-white`}>Delivery: {order.orderCompleted? " complete ": " Pending "}</p>
                     </div>
                     <div className="flex flex-wrap gap-1">

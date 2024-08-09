@@ -60,7 +60,7 @@ const AdminAddProduct = ({setShow}) => {
       });
     } else {
       if (name == 'price') {
-        if (value > 0 && value < 100000) {
+        if (value > 0 && value < 1000000) {
           setFormData({ ...formData, [name]: value });
 
         } else {

@@ -30,7 +30,7 @@ function Navbar() {
               <Image  width={32} height={32} src={"/favicon_io/favicon-32x32.png"} alt='branding logo'/>
             </span>
             <span className=' font-light text-sky-500'>
-            Online Mobile SHOP 
+            Winwares Den 
             </span>
           </Link>
           <button onClick={handleShowNav} className=' lg:hidden'>

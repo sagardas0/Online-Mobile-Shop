@@ -38,7 +38,9 @@ const UserCart = () => {
   } 
   if(banned){
     return (
-      <h2 className='text-lg p-10 font-semibold text-center flex items-center justify-center min-h-80vh w-full '>You are Banned !</h2>
+      <>
+        <h2 className='text-lg p-10 font-semibold text-center flex items-center justify-center min-h-80vh w-full '>Your account has been suspended.<br /> For security reasons, we cannot disclose specific details about this action. <br /> If you have questions, please contact our support team.</h2>
+      </>
     )
   }else{
     return (
@@ -89,8 +91,8 @@ const UserCart = () => {
             
             <button 
               onClick={handleCheckoutToStipe}
-              className='text-center p-3 rounded-xl w-full shadow bg-sky-500 hover:bg-sky-600 font-semibold text-white'>
-                Checkout ${myCart && calculateCartTotal(myCart)}
+              className='flex items-center justify-center  gap-3 text-center p-3 rounded-xl w-full shadow bg-sky-500 hover:bg-sky-600 font-semibold text-white'>
+                Checkout <span className='text-2xl'>৳</span> {myCart && calculateCartTotal(myCart)}
             </button>
           </div>
   

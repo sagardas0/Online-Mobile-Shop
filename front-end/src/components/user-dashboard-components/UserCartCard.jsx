@@ -75,7 +75,7 @@ const UserCartCard = ({p,fetchCart}) => {
                 </p>
                 <p className='flex gap-2 items-center'>
                     <span className=' font-semibold'>Price:</span>
-                    <span className='font-bold text-lg text-slate-900'>{product.price}</span>
+                    <span className=' flex items-center font-bold text-lg text-slate-900'> <span className='text-2xl'>৳</span> {product.price}</span>
                 </p>
                  
                 <button
